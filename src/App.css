@@ -1,38 +1,127 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: 'light';
+  src: url('../public/Kanit-Light.ttf');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: 'medium';
+  src: url('../public/Kanit-Medium.ttf');
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.bottom-bar-container{
+  width: 100%;
+  box-shadow:rgb(78, 78, 78) 2px 0px 3px 0px;
+  height: 80px;
+  position: absolute;
+  bottom: 0px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
+}
+
+.bottom-box{
+  font-family: light;
+  /* background-color: #22c55e; */
+  width: 100%;
+  height: 100%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  flex-direction: column;
+  transition-duration: 0.4s;
+  font-size: 14px;
+  position: relative;
+}
+
+.bottom-box p{
+  margin-top: 5px;
+}
+
+.bottom-box:hover{
+  background-color: rgb(194, 193, 193);
+  cursor: pointer;
+}
+
+.bottom-box img{
+  width: 27px;
+  transition-duration: 0.4s;
+}
+
+.bottom-box:hover img{
+  width: 30px;
+}
+
+.circle{
+  width: 25px;
+  height: 25px;
+  background-color: firebrick;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
+  position: absolute;
+  top: 10px;
+  transform: translateX(10px);
+  font-size: 16px;
+  transition-duration: 0.4s;
 }
 
-.App-link {
-  color: #61dafb;
+.circle p{
+  transform: translateY(-2.5px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bottom-box:hover .circle{
+  background-color: rgb(141, 27, 27);
+  width: 28px;
+  height: 28px;
+  transform: translateY(-5px);
+  transform: translateX(15px);
+}
+
+.header{
+  color: black;
+  font-family: light;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.tickets-container{
+  transform: translateY(50px);
+}
+
+.ticket-box{
+  background-color: #f4f4f5;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.ticket-number{
+  font-family: 'medium';
+}
+
+
+.sign-in-container{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.sign-in-phone{
+  border: none;
+  border: 1px solid #1a1a1a;
+  height: 50px;
+  margin-top: 10px;
+  border-radius: 8px;
+  
 }

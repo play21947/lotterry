@@ -9,12 +9,16 @@ const dbcon = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'cooperative'
+    database: 'lottery'
 })
 
 
 app.use(express.json())
 app.use(cors())
+
+app.get("/api/test", (req, res)=>{
+    res.json("Test")
+})
 
 
 app.post("/api/sign_in", (req, res)=>{
@@ -56,6 +60,15 @@ app.post("/api/sign_up", (req, res)=>{
         }
     })
     
+})
+
+
+app.get("/api/all_tickets", (req, res)=>{
+    dbcon.query("SELECT * FROM ticket", (err, tickets)=>{
+        if(err) throw err
+
+        res.json(tickets)
+    })
 })
 
 
