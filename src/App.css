@@ -125,3 +125,34 @@
   border-radius: 8px;
   
 }
+
+
+.welcomeback-text{
+  font-family: 'medium';
+  font-size: 24px;
+}
+
+.welcome-sec-text{
+  font-family: 'light';
+}
+
+.sign-in-phone{
+  text-indent: 8px;
+  font-family: 'light';
+}
+
+.sign-in-button{
+  border: none;
+  border-radius: 4px;
+  height: 40px;
+  margin-top: 15px;
+  background-color: #16a34a;
+  color: white;
+  font-family: 'medium';
+  font-size: 20px;
+}
+
+.sign-in-button:hover{
+  background-color: #117e39;
+  cursor: pointer
+}

@@ -59,7 +59,6 @@ app.post("/api/sign_up", (req, res)=>{
             })
         }
     })
-    
 })
 
 
